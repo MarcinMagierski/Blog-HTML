@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Blog</title>
+<meta charset="UTF-8">
+<meta name="description" content="Blog">
+<meta name="robots" content="index,follow,noarchive">
+<link rel="stylesheet" href="css/a.css">
+</head>
+<body>
+	<div id="a">
+		<header>
+	  	    	<a href="#" title="Go to Homepage"> Mój Blog</a>
+		    	<p>Nie cel jest najważniejszy lecz droga do niego.</p>
+		</header>
+		<div id="b">
+		     <article>
+				<h1>HTML5 i CSS3</h1>
+				<h3>Dlaczego powinieneś zainteresować się HTML5?</h3>
+				<p>Nowa wersja HTML unowocześnia, standaryzuje i określa zestaw rzeczy, dzięki którym można pisać współczesne 
+				strony i aplikacje.</p>
+				<p>Ostatnia zmiana w HTML4 miała miejsce na przełomie 1999 i 2000 – dziesięć lat temu. W międzyczasie pojawił się XML
+				 i jego własna wersja HTML — XHTML — biorąca szturmem leniwych developerów okładając ich niebieską czapką. 
+				 Mimo dodatkowych ukośników i paru bardzo potrzebnych zasad, nie wprowadzila niczego nowego – sieć dalej 
+				 funkcjonowała na tych samych znacznikach 
+				 <code>&lt;a></code> i <code>&lt;div></code>.</p>
+				 Nie oznacza to, że w ciągu dekady nie pojawił się żaden nowy pomysł. Web Standards Group za pomocą XHTML i CSS
+				  zmusiły internet do przyjęcia nowego modelu pisania stron – zgodnie ze standardami. Twórcy przestali używać 
+				  tabelek i zaczęli składać rusztowania swoich stron w podobny sposób.</p>
+				 <p>W międzyczasie odkryto na nowo JavaScript, a Ajax dołączył do słów nadużywanych przez entrepreneurów Web2.0.
+				   Pojawiły się też aplikacje internetowe jak GMail, multimedia rozkwitły dzięki YouTube i przyspieszającym
+				    łączom. Dodatkowo, twórcy przeglądarek zaczęli przejmować się standardami – nawet Microsoft postanowił 
+				    nadgonić przepaść dzielącą Internet Explorera od reszty aplikacji.</p>
+				 <p>To wszystko zrodziło potrzebę odświeżenia HTML – aby odzwieciedlić stan internetu. Dlatego HTML5:</p>
+				<ul>
+					<li>
+						dodaje nowe elementy o ustalonym odgórnie znaczeniu – jak 
+						<code>&lt;header></code>, 
+						<code>&lt;article></code>
+						lub 
+						<code>&lt;nav></code>
+						</li>
+						<li>
+						pozbywa się przestarzałych elementów – jak 
+						<code>&lt;font></code>
+						czy 
+						<code>&lt;frameset></code>
+						</li>
+						<li>
+							standaryzuje funkcjonalności 
+						<em>de facto</em>
+							– jak 
+						<code>&lt;canvas></code>
+							czy 
+							<code>&lt;embed></code>
+						</li>
+						<li>standaryzuje parsowanie HTML, skupiając się na jednolitej obsłudze błędów</li>
+						<li>
+						wprowadza elementy multimedialne i interaktywne – 
+							<code>&lt;video></code>
+							/ 
+							<code>&lt;audio></code>
+							oraz mnogie usprawnienia formularzy
+						</li>
+						<li>
+							wprowadza wiele API dla aplikacji internetowych – jak tryb offline lub natywne 
+						<em>drag &amp; drop</em>
+						</li>
+					</ul>
+				<h3>Podstawowe zmiany</h3>
+				<p>Jeśli piszesz strony zgodnie ze standardami, możesz zacząć używać HTML5 w ciągu sekund. Wystarczy że zmienisz
+				 pierwszą linijkę swoich stron:</p>
+				<code>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+				"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"></code>
+				</br>
+				<p>na</p>
+				<code>&lt;!DOCTYPE html></code>
+				</br>
+				<p>Nadal jesteś w trybie zgodnym ze standardami (co oznacza, że CSS będzie działał tak samo), możesz dalej 
+				używać ukośników z XHTML, wszystko działa identycznie – masz jednak teraz mnóstwo możliwości. Zacznijmy od
+				 szkieletu dokumentu.</p>
+				<h3>Od czego zacząć</h3>
+				<p>HTML5 pozwala Ci stracić wiele na wadze. Założmy, że szkielet Twoich stron jak dotąd wyglądał tak:</p>
+				<code>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"<br>
+					"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><br>
+				&lt;html xmlns="http://www.w3.org/1999/xhtml" lang="pl" xml:lang="pl"><br>
+				&lt;head><br>
+				&lt;meta http-equiv="Content-Type" content="text/html; UTF-8"><br>
+				&lt;title>XHTML 1.0 Strict&lt;/title><br>
+				&lt;link rel="stylesheet" href="main.css" type="text/css" /><br>
+				&lt;/head><br>
+				&lt;body><br>
+				…<br>
+				&lt;/body><br>
+				&lt;/html></code>
+				<p>Strona HTML5 może wyglądać tak:</p>
+				<code>
+				&lt;!DOCTYPE html><br>
+				&lt;html lang="pl"><br>
+				&lt;meta charset="UTF-8" /><br>
+				&lt;title>HTML5&lt;/title><br>
+				&lt;link rel="stylesheet" href="main.css" /><br>
+				&lt;/head><br>
+				&lt;body><br>
+				…<br>
+				&lt;/body><br>
+				&lt;/html><br>		
+				<p>Usunąłem około 50% znaków i wszystko działa tak samo – pozwól, że opiszę:</p>
+				<ul>
+					<li>
+						<p>Krótki doctype nowego HTML-a nadal włącza tryb zgodny ze standardami. Oznacza to, że CSS będzie działał dokładnie
+				 tak samo, jak w XHTML 1.0. Również w Internet Explorerze.</p>
+					</li>
+					<li>
+						<p>Element &lt;html> nie potrzebuje już przestrzeni nazw XML (xmlns=""), podobnie jak deklaracji języka dokumentu 
+				zgodnego z XML (xml:lang="") – wystarczy zwykły atrybut mówiący w jakim języku napisano stronę.</p>
+					</li>
+					<li>
+						<p>Element &lt;meta> deklarujący kodowanie znaków jest znacznie uproszczony – wystarczy jeden atrybut charset. Możesz 
+				też pozostać przy długim znaczniku – choć nowy, krótki działa identycznie w każdej przeglądarce.</p>
+					</li>
+					<li>
+						<p>Element &lt;link> wskazujący na arusz stylów nie potrzebuje zadeklarowania typu – CSS to zawsze text/css, więc 
+				możesz się go pozbyć. Nie musisz.</p>
+					</li>
+				</code>
+				</ul>
+				<h3>Troche informacji o podstawoych elementach</h3>
+				<p> W HTML5 możesz z powodzeniem stosować prawie wszystkie elementy dostępne w HTML4 (i XHTML 1.0). 
+				Ale nie musisz – nowe elementy zostały stworzone aby nadać znaczenie znacznikom takim jak 
+				<code>&lt;div id="header"></code>. 
+				Twórcy nowego standardu wyszli naprzeciw autorom stron i aplikacji, dodając najczęściej używane sekcje dokumentu:</p>
+				<ol>
+					<li>
+						<p>
+						<code>section</code>
+						- Fragment dokumentu grupujący treść w sposób tematyczny. Dobrym wskaźnikiem użycia 
+						<code>&lt;section></code>
+						jest zatytułowanie takiego fragmentu.</p>
+					</li>
+					<li>
+						<p>
+						<code>article</code>
+						- Sekcja z treścią, która jest na tyle niezależna, że zachowuje sens po udostępnieniu w innym miejscu –
+						 np w źródle RSS. Artykuł, post na blogu lub forum.</p>
+					</li>
+					<li>
+						<p>
+						<code>nav</code>
+						- Sekcja grupująca linki nawigacyjne - zarówno wewnątrz jednego dokumentu jak i całego serwisu.</p>
+					</li>
+					<li>
+						<p>
+						<code>hgroup</code>
+						- element pozwalający na grupowanie nagłówków 
+						<code>h1</code>
+						-
+						<code>h6</code>
+						. Dzięki temu możliwe jest użycie 
+						<code>h1</code>
+						dla tytułu sekcji oraz 
+						<code>h2</code>
+						dla podtytułu, bez negatywnego wpływu na outline dokumentu.</p>
+					</li>
+					<li>
+						<p>
+						<code>header</code>
+						- element grupujący elementy wprowadzające sekcji bądź dokumentu. Może to być nagłówek (
+						<code>h1</code>
+						-
+						<code>h6</code>
+						albo 
+						<code>hgroup</code>
+						), formularz wyszukiwania, linki nawigacyjne, data publikacji artykułu.</p>
+					</li>
+					<li>
+						<p>
+						<code>footer</code>
+						- stopka sekcji bądź dokumentu.</p>
+					</li>
+					<li>
+						<p>
+						<code>aside</code>
+						- sekcja przechowująca treść 
+						<em>związaną z treścią wokoło</em>
+						tego elementu, lecz możliwą do zaprezentowania także w innym miejscu. Przykładami są definicje 
+						encyklopedyczne w artykule albo boczny sidebar w dokumencie (przechowujący linki powiązane z treścią 
+						strony albo reklamy).</p>
+					</li>
+					<li>
+						<p>
+						<code>figure</code>
+						- sekcja przechowująca treść o której 
+						<em>wspomina się w artykule</em>
+						, ale która może być zaprezentowana także w innym miejscu. Przykładami są ilustracje, zdjęcia, bloki kodu.</p>
+					</li>
+				</ol>
+				<p>Tyle na dobry początek. Jak widzicie HTML 5 ma na celu uproszczenie całej składni, a także pozwala na tworzenie
+				 prostych stron bez potrzeby znania całej zaawansowanej składnie jak to było w poprzednich wersjach języka.
+				 Mam nadzieję że ten prosty tekst przybliży wam podstawowe zmiany w HTML5. Jeśli bedziecie potrzebowali wiecej
+				  inforamcji odsyłam was do Nawigacji gdzie mozecie znaleść kilka ciekwych stron poświeconych podstawowym, a także
+				   bardziej zaawansowanym funkcją HTML5 </p>
+				<h3>Moja pierwsza strona</h3>
+				<p>Poniżej znajdziecie linka który prowadzi do mojej pierwszej strony w HTML 5 która także korzysta z CSS3. 
+				Prosze nie przeraźcie się jej prostotą, w końcu każdy kiedyś zaczynał.</p>
+				<p><a href="http://sigma.ug.edu.pl/~mmagierski/">Moja pierwsza strona</a></p>
+			</article>
+			<aside>
+				<h4>Szukaj</h4>
+				<form action="#" class="s">
+					<input name="szukaj" type="text" value="wpisz i 'Enter'">
+				</form>
+				<h4>O mnie</h4>
+				<div id="c">
+				  	<p>Hej, nazywam się Marcin Magierski</p>
+					<p>Jestem studentem 2 roku informatyki na Uniwerystecie Gdańskim</p>
+					<p>Witam w progach mojego skromnego bloga na łamach którego postaram się wam przybliżyc ciekawe zmiany w HTML wersji 5.0</p>
+					</div>
+				<nav>
+					<h4>Nawigacja</h4>
+					<ul>
+						<li><a href="http://sigma.ug.edu.pl/~mmagierski/Blog/index.html?search=html#">Mój blog</a></li>
+						<li><a href="http://sigma.ug.edu.pl/~mmagierski/">Moja pierwsza strona</a></li>
+						<li><a href="http://www.html5rocks.com">HTML5 Rocks</a></li>
+						<li><a href="http://www.w3schools.com/html5/default.asp">Tutorial HTML5 angielski</a></li>
+						<li><a href="http://www.kurshtml.edu.pl/html/zielony.html">Tutorial HTML5 polski</a></li>
+					</ul>
+				</nav>
+				<h4>Galeria</h4>
+				<ul class="gallery">
+					<li><a href="index.html"><img src="obraz/img1.png" alt="#"/></a></li>
+					<li><a href="index.html"><img src="obraz/img2.png" alt="#"/></a></li>
+					<li><a href="index.html"><img src="i/img3.png" alt="#"/></a></li>
+				</ul>
+				<ul class="gallery">
+					<li><a href="index.html"><img src="obraz/img4.png" alt="#"/></a></li>
+					<li><a href="index.html"><img src="obraz/img5.png" alt="#"/></a></li>
+					<li><a href="index.html"><img src="obraz/img6.png" alt="#"/></a></li>
+				</ul>
+			</aside>
+		</div>
+		<footer>
+			<p><a href="http://sigma.ug.edu.pl/~mmagierski/">Marcin Magierski</a></p>
+		</footer>
+	</div>
+</body>
+</html>
